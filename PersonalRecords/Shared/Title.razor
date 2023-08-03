@@ -1,0 +1,14 @@
+﻿@using System.Reflection
+<PageTitle>@PageTitle</PageTitle>
+<h1>@Text</h1>
+
+@code {
+    [Parameter]
+    public string Text { get; set; }
+
+    private static readonly Assembly EntryAssembly = Assembly.GetEntryAssembly();
+    private static readonly string AppTitle = 
+        EntryAssembly.GetCustomAttributes<AssemblyTitleAttribute>().First().Title;
+
+    public string PageTitle => $"{Text} - {AppTitle}";
+}
