@@ -1,10 +1,12 @@
 ﻿@page "/table"
 
-<Title Text="@_title"></Title>
+<Title Text="@Name"></Title>
 
 TODO: Present records for the current table
 
 @code
 {
-    private string _title = "TODO: table name (from query string)";
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public string Name { get; set; }
 }
