@@ -1,5 +1,39 @@
 ﻿@page "/"
+@inject HttpClient Http
 
 <Title Text="Tables"></Title>
 
-TODO: List of tables and their latest value, with a link to visit that table.
+<table class="table">
+    <thead>
+    <tr>
+        <th>Table name</th>
+        <th>Last entry date</th>
+        <th>Last entry description</th>
+        <th>Last entry value</th>
+    </tr>
+    </thead>
+    @if (_tables != null)
+    {
+        <tbody>
+        @foreach (var table in _tables)
+        {
+            <tr>
+                <td><a href="Table?Name=@table.Name">@table.DisplayName</a></td>
+                <td>@table.LastEntryDate</td>
+                <td>@table.LastEntryDescription</td>
+                <td>@table.LastEntryValue</td>
+            </tr>
+        }
+        </tbody>
+    }
+</table>
+
+@code
+{
+    private Models.Table[] _tables;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _tables = await Http.GetFromJsonAsync<Models.Table[]>("sample-data/tables.json");
+    }
+}
