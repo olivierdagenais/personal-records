@@ -1,0 +1,20 @@
+﻿[
+  {
+    "Name": "MyMedications",
+    "Type": "LoggedEvent",
+    "DisplayName": "My medications",
+    "Description": "A log of everything I take",
+    "LastEntryDate": "2016-06-21T14:52:35Z",
+    "LastEntryDescription":  "Tylenol",
+    "LastEntryValue": "400mg"
+  },
+  {
+    "Name": "AllowanceKid1",
+    "Type": "CumulativeMoney",
+    "DisplayName": "First son's allowance'",
+    "Description": "Add $3 every Saturday",
+    "LastEntryDate": "2023-07-29T03:00:00Z",
+    "LastEntryDescription": "Deposit: Allowance",
+    "LastEntryValue": "$9.37"
+  }
+]
