@@ -11,7 +11,7 @@
   {
     "Name": "AllowanceKid1",
     "Type": "CumulativeMoney",
-    "DisplayName": "First son's allowance'",
+    "DisplayName": "First son's allowance",
     "Description": "Add $3 every Saturday",
     "LastEntryDate": "2023-07-29T03:00:00Z",
     "LastEntryDescription": "Deposit: Allowance",
